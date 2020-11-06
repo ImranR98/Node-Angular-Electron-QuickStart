@@ -4,11 +4,12 @@
   "description": "",
   "main": "dist/main.js",
   "scripts": {
-    "start": "node ./dist/main.js",
-    "tsc": "tsc",
-    "dev": "ts-node-dev --respawn --poll ./src/main.ts",
-    "electron": "electron .",
-    "build": "tsc; npm run build --prefix ./frontend; electron-packager . --out=build --platform=win32; electron-packager . --out=build --platform=darwin; electron-packager . --out=build --platform=linux"
+    "back": "ts-node-dev --respawn --poll ./src/main.ts",
+    "front": "npm run start --prefix ./frontend",
+    "app": "electron .",
+    "build-back": "tsc",
+    "build-front": "npm run build --prefix ./frontend",
+    "build-app": "electron-packager . --out=build --overwrite"
   },
   "author": "",
   "license": "ISC",
